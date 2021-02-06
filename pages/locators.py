@@ -1,6 +1,6 @@
 # Локаторы для авторизации
 class AuthLocators:
-    LOGIN = '//a[contains(@href, "login.tmall.ru")]'   # xpath
+    LOGIN = '//a[contains(text(), "Войти")]'   # xpath
     AUTH_EMAIL = 'fm-login-id'  # id
     AUTH_PASS = 'fm-login-password'  # id
     AUTH_BTN = 'fm-button.fm-submit.password-login'  # class

@@ -1,5 +1,3 @@
-import sys
-sys.path.append('..')
 from pages.page_header import PageHeader
 from pages.functions import header_assertions
 import inspect

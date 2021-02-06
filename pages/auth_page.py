@@ -1,13 +1,14 @@
-from .locators import AuthLocators
-from .settings import start_url
-from .elements import WebElement
-from .base import WebPage
+from pages.locators import AuthLocators
+from pages.settings import start_url
+from pages.elements import WebElement
+from pages.base import WebPage
 import pickle
 
 
 class AuthPage(WebPage):
     def __init__(self, web_driver, url=start_url):
         super().__init__(web_driver, url)
+        self.wait_page_loaded(wait_for_element=self.login)
 
     login = WebElement(xpath=AuthLocators.LOGIN)   # поле логина
     email = WebElement(id=AuthLocators.AUTH_EMAIL)   # эл. почта для логина
